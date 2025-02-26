@@ -37,9 +37,8 @@ class FetchEventSource {
         const contentType = response.headers.get('content-type');
         const ACCEPT = options.headers['Accept'];
         if (!String(contentType).startsWith(ACCEPT)) {
-          console.error(`Expected content-type to be ${ACCEPT}, Actual: ${contentType}`);
+          throw new Error(`Expected content-type to be ${ACCEPT}, Actual: ${contentType} (HTTP ${response.status})`);
         }
-        throw new Error(`HTTP ${response.status}`);
       }
 
       // 读取流

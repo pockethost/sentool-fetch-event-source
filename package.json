@@ -11,8 +11,8 @@
   ],
   "license": "MIT",
   "type": "module",
-  "main": "dist/index.cjs",
-  "module": "dist/index.esm.js",
+  "main": "src/index.js",
+  "module": "src/index.js",
   "files": [
     "dist"
   ],
@@ -21,7 +21,9 @@
     "url": "git://github.com/sentool/fetch-event-source.git"
   },
   "jest": {
-    "testMatch": ["**/tests/**/*.js?(x)"]
+    "testMatch": [
+      "**/tests/**/*.js?(x)"
+    ]
   },
   "scripts": {
     "dist": "npx rollup -c",
